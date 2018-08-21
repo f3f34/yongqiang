@@ -17,13 +17,13 @@ public class SwaggerDocumentationConfig {
 
     ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-            .title("消息服务API")
-            .description("消息服务相关api")
+            .title("API")
+            .description("相关api")
             .license("Apache 2.0")
             .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html")
             .termsOfServiceUrl("")
             .version("1.0.0")
-            .contact(new Contact("","", "zhujun@juqitech.com"))
+            .contact(new Contact("","", "zhujun@qq.com"))
             .build();
     }
 

@@ -1,9 +1,10 @@
 package com.juqitech.service.dao.imp;
 
+import com.juqitech.service.annotation.db.sql.JDBCTemplateSQL;
 import com.juqitech.service.dao.TemplateDao;
-import com.juqitech.service.dao.sqlconfig.TemplateDaofig;
 import com.juqitech.service.db.SqlBase;
 import com.juqitech.service.utils.query.QueryFilter;
+import com.juqitech.service.utils.query.SQLHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -19,8 +20,6 @@ public class TemplateDaoImpl extends SqlBase implements TemplateDao {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    @Autowired
-    private TemplateDaofig daofig;
 
 //    @Override
 //    public boolean addCity(String cityOID,String province, String city) {
@@ -80,8 +79,9 @@ public class TemplateDaoImpl extends SqlBase implements TemplateDao {
     }
 
     @Override
+    @JDBCTemplateSQL("")
     public List<Map<String, Object>> getCity(QueryFilter filter) {
-        return queryList(daofig.getQuery_message_template(),null,filter);
+        return queryList(SQLHelper.getDeclaredSQL(),null,filter);
     }
 
 }

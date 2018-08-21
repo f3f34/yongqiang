@@ -8,9 +8,9 @@
 		<version>1.2.3.RELEASE</version>
 	</parent>
 	<groupId>com.juqitech.service</groupId>
-	<artifactId>service_message</artifactId>
+	<artifactId>service_yongqiang</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>service_message</name>
+	<name>service_yongqiang</name>
 	<properties>
 		<springfox-version>2.5.0</springfox-version>
 	</properties>
